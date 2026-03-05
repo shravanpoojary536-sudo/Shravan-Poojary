@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,12 +53,12 @@ button:hover{
 
 <h1>SPORTEC Dashboard</h1>
 
-<button onclick="showEvents()">Events</button>
-<button onclick="showTeam()">Core Team</button>
-<button onclick="showAnnouncement()">Announcements</button>
+<button type="button" onclick="showEvents()">Events</button>
+<button type="button" onclick="showTeam()">Core Team</button>
+<button type="button" onclick="showAnnouncement()">Announcements</button>
 
 <div id="content">
-Click a button to see updates.
+<p>Click a button to see updates.</p>
 </div>
 
 </div>
@@ -65,29 +66,32 @@ Click a button to see updates.
 <script>
 
 function showEvents(){
-    document.getElementById("content").innerHTML =
-    "<h2>Sportec Events</h2>" +
-    "<ul>" +
-    "<li>Football Tournament</li>" +
-    "<li>Basketball Championship</li>" +
-    "<li>Cricket League</li>" +
-    "<li>Table Tennis Competition</li>" +
-    "</ul>";
+    document.getElementById("content").innerHTML = `
+        <h2>Sportec Events</h2>
+        <ul>
+            <li>Football Tournament</li>
+            <li>Basketball Championship</li>
+            <li>Cricket League</li>
+            <li>Table Tennis Competition</li>
+        </ul>
+    `;
 }
 
 function showTeam(){
-    document.getElementById("content").innerHTML =
-    "<h2>Core Committee</h2>" +
-    "<p>President: Rahul Sharma</p>" +
-    "<p>Vice President: Aditi Mehta</p>" +
-    "<p>Event Head: Arjun Patel</p>";
+    document.getElementById("content").innerHTML = `
+        <h2>Core Committee</h2>
+        <p>President: Rahul Sharma</p>
+        <p>Vice President: Aditi Mehta</p>
+        <p>Event Head: Arjun Patel</p>
+    `;
 }
 
 function showAnnouncement(){
-    document.getElementById("content").innerHTML =
-    "<h2>Latest Announcement</h2>" +
-    "<p>Registrations for Sportec 2026 are now open!</p>" +
-    "<p>Last date to apply: 20 March 2026.</p>";
+    document.getElementById("content").innerHTML = `
+        <h2>Latest Announcement</h2>
+        <p>Registrations for Sportec 2026 are now open!</p>
+        <p>Last date to apply: 20 March 2026.</p>
+    `;
 }
 
 </script>
