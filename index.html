@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPORTEC Core Committee Interview Form</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    padding:20px;
+}
+
+.container{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align:center;
+    color:#333;
+}
+
+label{
+    font-weight:bold;
+}
+
+input, textarea, select{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+
+.checkbox-group{
+    margin-bottom:15px;
+}
+
+.checkbox-group label{
+    font-weight:normal;
+}
+
+button{
+    background:#007bff;
+    color:white;
+    border:none;
+    padding:12px;
+    width:100%;
+    font-size:16px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>SPORTEC Core Committee Interview Form</h1>
+
+<form>
+
+<h3>Basic Information</h3>
+
+<label>Full Name</label>
+<input type="text" name="name" required>
+
+<label>Department / Course</label>
+<input type="text" name="department">
+
+<label>Year of Study</label>
+<select name="year">
+<option>First Year</option>
+<option>Second Year</option>
+<option>Third Year</option>
+<option>Fourth Year</option>
+</select>
+
+<label>Phone Number</label>
+<input type="tel" name="phone">
+
+<label>Email ID</label>
+<input type="email" name="email">
+
+<h3>Position Applied For</h3>
+
+<div class="checkbox-group">
+<label><input type="checkbox" name="position" value="Event Management"> Event Management</label><br>
+<label><input type="checkbox" name="position" value="Marketing"> Marketing & Sponsorship</label><br>
+<label><input type="checkbox" name="position" value="Logistics"> Logistics & Operations</label><br>
+<label><input type="checkbox" name="position" value="PR"> Public Relations</label><br>
+<label><input type="checkbox" name="position" value="Design"> Design & Media</label><br>
+<label><input type="checkbox" name="position" value="Technical"> Technical / IT</label>
+</div>
+
+<h3>Experience & Background</h3>
+
+<label>Have you organized events before?</label>
+<textarea name="experience"></textarea>
+
+<label>Have you participated in Sportec or other sports events?</label>
+<textarea name="participation"></textarea>
+
+<label>What skills can you contribute to Sportec?</label>
+<textarea name="skills"></textarea>
+
+<h3>Interview Questions</h3>
+
+<label>Why do you want to be part of the Sportec Core Committee?</label>
+<textarea name="why"></textarea>
+
+<label>What ideas would you bring to improve Sportec?</label>
+<textarea name="ideas"></textarea>
+
+<label>Describe a leadership or responsibility experience.</label>
+<textarea name="leadership"></textarea>
+
+<label>How would you handle conflict within the team?</label>
+<textarea name="conflict"></textarea>
+
+<label>How many hours per week can you dedicate?</label>
+<input type="text" name="hours">
+
+<button type="submit">Submit Form</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
