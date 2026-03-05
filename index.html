@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Search Suggestion</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        #suggestions {
+            border: 1px solid #ccc;
+            max-width: 300px;
+            display: none;
+            position: absolute;
+            background: white;
+        }
+
+        #suggestions div {
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        #suggestions div:hover {
+            background: #f0f0f0;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            // Detect typing
+            $("#search").keyup(function(){
+                let query = $(this).val();
+
+                if(query.length > 1){ // only search if more than 1 character
+                    $.ajax({
+                        url: "search.php", // backend file
+                        method: "POST",
+                        data: { search: query },
+                        success: function(data){
+                            $("#suggestions").html(data).show();
+                        }
+                    });
+                } else {
+                    $("#suggestions").hide();
+                }
+            });
+
+            // Click on suggestion
+            $(document).on("click","#suggestions div",function(){
+                $("#search").val($(this).text());
+                $("#suggestions").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>AJAX Search Suggestion</h2>
+    <input type="text" id="search" placeholder="Search..." autocomplete="off">
+    <div id="suggestions"></div>
+</body>
+</html>
